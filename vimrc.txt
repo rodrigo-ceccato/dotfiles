@@ -537,11 +537,11 @@ endif
 
 "*****************************************************************************
 "Nerd Tree auto start
-let g:NERDTreeWinSize=25
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
+"let g:NERDTreeWinSize=25
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
 
-autocmd VimEnter * wincmd w
+"autocmd VimEnter * wincmd w
 
 "*****************************************************************************
 
