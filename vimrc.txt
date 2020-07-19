@@ -31,6 +31,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'paolodragone/vim-pymzn'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
+Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -248,7 +249,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'papercolor'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -546,6 +547,7 @@ endif
 
 "*****************************************************************************
 
+
 "*****************************************************************************
 "" Convenience variables
 "*****************************************************************************
@@ -585,3 +587,5 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+highlight Normal ctermfg=grey ctermbg=none
