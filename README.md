@@ -13,6 +13,8 @@ Here lies some my dotfiles for:
 
 I also packed a small script used for setting a video wallpaper using xwinwrap and mpv.
 
+Added gitignore file that can be added globly with "git config --global core.excludesfile ~/.gitignore", after placed there.
+
 
 ## Thanks
 Wallpaper from:
