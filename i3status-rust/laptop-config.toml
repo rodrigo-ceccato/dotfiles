@@ -1,0 +1,97 @@
+icons = "awesome"
+
+[theme]
+#name = "solarized-dark"
+name = "native"
+#name = "plain"
+
+[[block]]
+block = "music"
+buttons = ["play", "next"]
+on_collapsed_click = "chromium --app=https://music.youtube.com/"
+
+[[block]]
+block = "pomodoro"
+length = 25
+break_length = 5
+message = "Take a break!"
+break_message = "Back to work!"
+notifier = "notifysend"
+
+[[block]]
+block = "notify"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "net"
+format = "{ssid} {signal_strength} {speed_down;K*b} {speed_up;K*b}"
+interval = 5
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = "{icon} {available}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_avail;M}"
+format_swap = "{swap_used_percents}"
+display_type = "memory"
+clickable = false
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_avail;M}"
+format_swap = "{swap_used}/{swap_total}"
+display_type = "swap"
+clickable = false
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "temperature"
+collapsed = false
+good = 40
+idle = 60
+info = 79
+warning = 91
+interval = 1
+format = "{max}"
+chip = "*-isa-*"
+
+[[block]]
+block = "nvidia_gpu"
+show_utilization = false
+label = ""
+
+[[block]]
+block = "pacman"
+interval = 600
+format = "{aur}"
+format_singular = "{aur}"
+format_up_to_date = "{aur}"
+# aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
+aur_command = "yay -Qu"
+
+[[block]]
+block = "battery"
+interval = 10
+driver = "upower"
+format = "{percentage} {time}"
+
+[[block]]
+block = "time"
+interval = 0.5
+format = "%a %d/%m %X"
