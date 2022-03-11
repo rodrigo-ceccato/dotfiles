@@ -1,5 +1,5 @@
 # dotfiles
-Here lies some my dotfiles for:
+Here lies some dotfiles for:
 
 * Terminator terminal
 * i3-gaps
