@@ -1,0 +1,101 @@
+icons = "awesome"
+
+[theme]
+name = "solarized-dark"
+#name = "native"
+#name = "plain"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[[block]]
+[[block]]
+block = "pomodoro"
+length = 25
+break_length = 5
+message = "Take a break!"
+break_message = "Back to work!"
+notifier = "notifysend"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "music"
+buttons = ["play", "next"]
+on_collapsed_click = "chromium --app=https://music.youtube.com/"
+
+[[block]]
+block = "notify"
+
+[[block]]
+block = "net"
+format = "{speed_down;K*b} {speed_up;K*b}"
+interval = 5
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = "{icon} {available}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_avail;M}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "cpu"
+format = "{utilization:2} {frequency}"
+interval = 1
+
+[[block]]
+block = "temperature"
+collapsed = false
+good = 30
+idle = 40
+info = 79
+warning = 91
+interval = 1
+format = "{max}"
+chip = "*-pci-*"
+
+[[block]]
+block = "nvidia_gpu"
+label = ""
+
+[[block]]
+block = "pacman"
+interval = 600
+format = "{both} updates"
+format_singular = "{both} update"
+format_up_to_date = "up to date"
+critical_updates_regex = "(linux|linux-lts|linux-zen|nvidia|nvidia-dkms)"
+# aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
+aur_command = "pikaur -Qua"
+
+[[block]]
+block = "bluetooth"
+mac = "A4:AE:11:F3:65:89"
+format_unavailable = "{label}"
+format = "{label}"
+
+[[block]]
+block = "weather"
+format = "{weather} {temp}, {wind} m/s"
+service = { name = "openweathermap", api_key = "744aca831c53ad97721a98fb09123ee4", city_id = "3470353", units = "metric" }
+[block.format]
+short = ""
+
+[[block]]
+block = "time"
+format = "%a %d/%m %l:%M %p"
+interval = 0.5
+[block.format]
+short = "%l:%M %p"
